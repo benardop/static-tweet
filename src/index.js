@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-function Tweet() {
+function Tweet({tweet}) {
   return (
     <div className='tweet'>
       <Avatar />
@@ -65,7 +65,19 @@ const LikeButton = () => (
 const MoreOptionButton = () => (
   <i className='fa fa-ellipsis-h more-options-button'/>
 )
+
+const testTweet = {
+  message: "Something about cats",
+  gravatar: "XYZ",
+  author: {
+    handle: "catperson",
+    name: "I am a Cat person"
+  },
+  like: 2,
+  retweets: 0,
+  timestamp: "2023-12-13 10:05:35"
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Tweet />
+  <Tweet tweet={testTweet} />
 )
