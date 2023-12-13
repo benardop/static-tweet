@@ -13,7 +13,7 @@ function Tweet({tweet}) {
         <div className='buttons'>
           <ReplyButton/>
           <RetweetButton count={tweet.retweets}/>
-          <LikeButton count={tweet.like}/>
+          <LikeButton count={tweet.likes}/>
           <MoreOptionButton/>
         </div>
       </div>
@@ -59,8 +59,8 @@ const ReplyButton = () => (
 );
 
 const RetweetButton = ({count}) => (
-  <span className='retweet-count'>
-    <i className="fa fa-retweet retweet-button"/>
+  <span className='retweet-button'>
+    <i className="fa fa-retweet"/>
       {getRetweetCount(count)}
   </span>
 )
@@ -98,7 +98,7 @@ const testTweet = {
     name: "I am a Cat person"
   },
   likes: 2,
-  retweets: 0,
+  retweets: 4,
   timestamp: "2023-12-13 10:05:35"
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
