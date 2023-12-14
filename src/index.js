@@ -39,7 +39,6 @@ function Message({text}) {
     </div>
   )
 }
-
 function Author({author}) {
   const {name, handle} = author;
   return (
@@ -49,7 +48,6 @@ function Author({author}) {
     </span>
   )
 }
-
 const Time = ({time}) => (
   <span> {moment(time).fromNow()} </span>
 )
