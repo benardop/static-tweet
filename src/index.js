@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import moment from 'moment/moment';
+import PropTypes from 'prop-types'
 import './index.css';
 
 function Tweet({tweet}) {
@@ -32,6 +33,10 @@ function Avatar({hash}) {
   )
 }
 
+Avatar.propTypes = {
+  hash: PropTypes.string
+};
+
 function Message({text}) {
   return (
     <div className='message'>
@@ -39,6 +44,10 @@ function Message({text}) {
     </div>
   )
 }
+Message.propTypes = {
+  text: PropTypes.string
+};
+
 function Author({author}) {
   const {name, handle} = author;
   return (
@@ -48,9 +57,21 @@ function Author({author}) {
     </span>
   )
 }
+
+Author.propTypes = {
+  Author: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    handle: PropTypes.string.isRequired
+  }).isRequired
+}
+
 const Time = ({time}) => (
   <span> {moment(time).fromNow()} </span>
 )
+
+Time.propTypes = {
+  time: PropTypes.string
+};
 
 const ReplyButton = () => (
   <i className='fa fa-reply reply-button'/>
@@ -63,6 +84,10 @@ const RetweetButton = ({count}) => (
   </span>
 )
 
+RetweetButton.propTypes = {
+  count: PropTypes.number
+};
+
 const LikeButton = ({count}) => (
   <span className='like-button'>
     <i className='fa fa-heart'/>
@@ -72,6 +97,10 @@ const LikeButton = ({count}) => (
           </span>}
   </span>
 )
+
+LikeButton.propTypes = {
+  count: PropTypes.number
+};
 
 const MoreOptionButton = () => (
   <i className='fa fa-ellipsis-h more-options-button'/>
