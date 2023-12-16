@@ -32,10 +32,10 @@ function Avatar({hash}) {
       className='avatar' />
   )
 }
-
 Avatar.propTypes = {
   hash: PropTypes.string
 };
+
 
 function Message({text}) {
   return (
