@@ -133,6 +133,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
    <Tweet tweet={testTweet} />
-   <AddressLabel person={testEnvelope} />
   </>
 )
