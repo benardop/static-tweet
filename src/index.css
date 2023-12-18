@@ -56,3 +56,12 @@
   margin-left: 9px;
   font-weight: bold;
 }
+
+.address {
+  width: 564px;
+  min-height: 68px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}

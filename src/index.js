@@ -118,46 +118,6 @@ function Count({count}) {
   }
 }
 
-function AddressLabel({person}) {
-  return (
-    <div className='address'>
-       <Name text={person.name}/>
-       <Street text={person.street}/>
-       <State text={person.state} />
-    </div>
-  )
-}
-
-function Name({text}) {
-  return (
-    <div className='name'>
-      {text}
-    </div>
-  )
-}
-
-function Street({text}) {
-  return (
-    <div className='street'>
-      {text}
-    </div>
-  )
-}
-
-function State({text}) {
-  return (
-    <div className='state'>
-      {text}
-    </div>
-  )
-}
-
-const personAddress = {
-    name: "John Doe",
-    street: "123 Fake St",
-    state: "Boston MA 02118"
-}
-
 const testTweet = {
   message: "Something about cats",
   gravatar: "XYZ",
@@ -173,6 +133,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
    <Tweet tweet={testTweet} />
-   <AddressLabel person={personAddress}/>
+   <AddressLabel person={testEnvelope} />
   </>
 )
