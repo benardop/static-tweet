@@ -83,8 +83,7 @@ const RetweetButton = ({count}) => (
     <i className="fa fa-retweet"/>
       <Count count={count} />
   </span>
-)
-
+);
 RetweetButton.propTypes = {
   count: PropTypes.number
 };
@@ -98,7 +97,6 @@ const LikeButton = ({count}) => (
           </span>}
   </span>
 )
-
 LikeButton.propTypes = {
   count: PropTypes.number
 };
