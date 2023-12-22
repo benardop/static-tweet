@@ -140,7 +140,17 @@ const personObject = {
       name: "John Doe",
       street: "128 Fake Stree",
       state: "San Francisco, CA 94110"
-   }
+   },
+   fromPerson: {
+      name: "Mr John Doe",
+      street: "128 Fake Stree",
+      state: "San Francisco, CA 94110"
+   },
+   toPerson: {
+    name: "Mrs. John Doe",
+    street: "1115 Fake Stree",
+    state: "Boston, MA 94110"
+ }
 }
 const testTweet = {
   message: "Something about cats",
