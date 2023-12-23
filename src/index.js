@@ -152,6 +152,7 @@ const personObject = {
     state: "Boston, MA 94110"
  }
 }
+
 const testTweet = {
   message: "Something about cats",
   gravatar: "XYZ",
@@ -163,6 +164,7 @@ const testTweet = {
   retweets: 4,
   timestamp: "2023-12-13 10:05:35"
 }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='components'>
