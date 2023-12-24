@@ -119,37 +119,51 @@ function Count({count}) {
 const AddressLabel= ({person}) => {
   return (
      <div className='person'>
-       <Person address={person.address}/>
+       <Address fromPerson={person.fromPerson} toPerson={person.toPerson}/>
+       <Stamp text={person.stamp} />
      </div>
   )
 }
 
-const Person =({address}) => {
-  const { name, street, state} = address;
+const Stamp =({text}) => {
   return (
     <div>
-      <div className='name'>{name}</div>
-      <div className='street'>{street}</div>
-      <div className='state'>{state}</div>
+      {text}
     </div>
   )
 }
 
+function Address({fromPerson, toPerson}){
+  const { senderName, senderStreet, senderState } = fromPerson;
+  const { receiverName, receiverStreet, receiverState } = toPerson;
+  return (
+    <div className='envelope'>
+      <div className='sender-address'>
+        <div>{senderName}</div>
+        <div>{senderStreet}</div>
+        <div>{senderState}</div>
+      </div>
+      <div className='receiver-address'>
+        <div>{receiverName}</div>
+        <div>{receiverStreet}</div>
+        <div>{receiverState}</div>
+      </div>
+    </div>
+  )
+
+}
+
 const personObject = {
-    address: {
-      name: "John Doe",
-      street: "128 Fake Stree",
-      state: "San Francisco, CA 94110"
-   },
+  stamp: "Stamp",
    fromPerson: {
-      name: "Mr John Doe",
-      street: "128 Fake Stree",
-      state: "San Francisco, CA 94110"
+      senderName: "Mr John Doe",
+      senderStreet: "128 Fake Stree",
+      senderState: "San Francisco, CA 94110"
    },
    toPerson: {
-    name: "Mrs. John Doe",
-    street: "1115 Fake Stree",
-    state: "Boston, MA 94110"
+    receiverName: "Mrs. John Doe",
+    receiverStreet: "1115 Fake Stree",
+    receiverState: "Boston, MA 94110"
  }
 }
 

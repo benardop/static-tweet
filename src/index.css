@@ -72,9 +72,8 @@
 }
 .person {
   width: 564px;
-  min-height: 68px;
+  min-height: 168px;
   border: 1px solid #ccc;
-  background-color: #ccc;
   padding: 10px;
   border-radius: 5px;
   margin-top: 10px;
