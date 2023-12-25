@@ -122,9 +122,8 @@ const AddressLabel= ({person}) => {
        <Address fromPerson={person.fromPerson} toPerson={person.toPerson}/>
        <Stamp text={person.stamp} />
      </div>
-  )
+  );
 }
-
 const Stamp =({text}) => {
   return (
     <div>
@@ -132,7 +131,6 @@ const Stamp =({text}) => {
     </div>
   )
 }
-
 function Address({fromPerson, toPerson}){
   const { senderName, senderStreet, senderState } = fromPerson;
   const { receiverName, receiverStreet, receiverState } = toPerson;
