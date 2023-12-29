@@ -130,8 +130,9 @@ const Stamp =({text}) => {
     <div>
       {text}
     </div>
-  )
+  );
 }
+
 function Address({fromPerson, toPerson}){
   const { senderName, senderStreet, senderState } = fromPerson;
   const { receiverName, receiverStreet, receiverState } = toPerson;
