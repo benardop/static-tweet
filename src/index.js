@@ -127,7 +127,7 @@ const AddressLabel= ({person}) => {
 
 const Stamp =({text}) => {
   return (
-    <div>
+    <div className='stamp'>
       {text}
     </div>
   );
@@ -153,7 +153,7 @@ function Address({fromPerson, toPerson}){
 
 }
 const personObject = {
-  stamp: "Stamp",
+  stamp: "STAMP",
    fromPerson: {
       senderName: "Mr John Doe",
       senderStreet: "128 Fake Stree",

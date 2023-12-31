@@ -77,4 +77,26 @@
   padding: 10px;
   border-radius: 5px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.stamp {
+  border: 1px solid #ccc;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  
+}
+.envelope {
+  position: relative;
+  width: 564px;
+  min-height: 168px;
+  display: flex;
+}
+.receiver-address {
+  align-self:center;
+  margin-top: 40px;
 }
