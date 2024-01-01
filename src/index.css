@@ -90,12 +90,14 @@
   position: absolute;
   
 }
+
 .envelope {
   position: relative;
   width: 564px;
   min-height: 168px;
   display: flex;
 }
+
 .receiver-address {
   align-self:center;
   margin-top: 40px;
