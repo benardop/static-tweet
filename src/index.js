@@ -125,6 +125,14 @@ const AddressLabel= ({person}) => {
   );
 }
 
+const CreditCard = ({cardInfo}) => {
+  return (
+    <div className='card'>
+      <Card details={cardInfo.details} />
+    </div>
+  )
+}
+
 const Stamp =({text}) => {
   return (
     <div className='stamp'>
@@ -150,8 +158,21 @@ function Address({fromPerson, toPerson}){
       </div>
     </div>
   );
-
 }
+
+function Card({details}) {
+    const {name, bank, expiryDate, number} = details;
+
+    return (
+      <div className='card-details'>
+        <div>{bank}</div>
+        <div>{number}</div>
+        <div>{expiryDate}</div>
+        <div>{name}</div>
+      </div>
+    );
+}
+
 const personObject = {
   stamp: "STAMP",
    fromPerson: {
@@ -178,10 +199,20 @@ const testTweet = {
   timestamp: "2023-12-13 10:05:35"
 }
 
+const cardDetails = {
+  details: {
+    name: "John Doe",
+    bank: "Big Bank, Inc.",
+    expiryDate: "VALID THRU 08/19",
+    number: "1234 7765 8876 2254"
+  }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='components'>
    <Tweet tweet={testTweet} />
    <AddressLabel person={personObject}/>
+   <CreditCard cardInfo={cardDetails} />
   </div>
 )

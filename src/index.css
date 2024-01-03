@@ -88,7 +88,7 @@
   top: 10px;
   right: 10px;
   position: absolute;
-  
+  padding: 10px;
 }
 
 .envelope {
@@ -101,4 +101,21 @@
 .receiver-address {
   align-self:center;
   margin-top: 40px;
+}
+
+.card {
+  width: 564px;
+  min-height: 168px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color:lightblue;
+}
+
+.card-details {
+  width: 564px;
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
 }
