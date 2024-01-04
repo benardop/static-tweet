@@ -173,6 +173,14 @@ function Card({details}) {
     );
 }
 
+function ErrorBox({children}) {
+  return (
+    <div className='error'>
+      {children}
+    </div>
+  )
+}
+
 const personObject = {
   stamp: "STAMP",
    fromPerson: {
@@ -214,5 +222,6 @@ root.render(
    <Tweet tweet={testTweet} />
    <AddressLabel person={personObject}/>
    <CreditCard cardInfo={cardDetails} />
+   <ErrorBox children={"The world is ending"}></ErrorBox>
   </div>
 )
