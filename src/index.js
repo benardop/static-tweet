@@ -222,6 +222,6 @@ root.render(
    <Tweet tweet={testTweet} />
    <AddressLabel person={personObject}/>
    <CreditCard cardInfo={cardDetails} />
-   <ErrorBox children={"The world is ending"}></ErrorBox>
+   <ErrorBox children={<em>The world is ending</em>}></ErrorBox>
   </div>
 )
